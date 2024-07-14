@@ -1,9 +1,14 @@
-**Name:** DAVE MAHRSHI HIREN\n
-**Company:** CODTECH IT SOLUTIONS\n
-**ID:** CT04CSEH2205\n
-**Domain:** Cybersecurity & Ethical Hacking\n
-**Duration:** June to July 2024\n
-**Mentor:** SRAVANI GOUNI\n
+**Name:** DAVE MAHRSHI HIREN
+
+**Company:** CODTECH IT SOLUTIONS
+
+**ID:** CT04CSEH2205
+
+**Domain:** Cybersecurity & Ethical Hacking
+
+**Duration:** June to July 2024
+
+**Mentor:** SRAVANI GOUNI
 
 ## Overview of the Project
 
