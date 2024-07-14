@@ -20,4 +20,4 @@
 The main objective of this project is to develop a tool to assess the strength of passwords entered by users by implementing algorithms to analyze factors such as length, complexity, and uniqueness to provide feedback on password strength.
 
 ### Technology Used
-**Python:** The primary programming language for data analysis
+**Python:** The primary programming language for building password strength checker
