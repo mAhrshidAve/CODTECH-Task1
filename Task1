@@ -1,0 +1,90 @@
+#This is a python code for password strength checker.
+#Using this code we can check the strength of any password entered by the user.
+
+import string
+import getpass
+
+def check_passwd():
+    print(" ")
+    password = getpass.getpass("Enter Your Password : ")
+    print(" ")
+    strength = 0
+    remarks = ''
+    lower_cnt = upper_cnt = num_cnt = wspace_cnt = special_cnt = 0
+
+    for char in list(password):
+        if char in string.ascii_lowercase:
+            lower_cnt += 1
+        elif char in string.ascii_uppercase:
+            upper_cnt += 1
+        elif char in string.digits:
+            num_cnt += 1
+        elif char == ' ':
+            wspace_cnt += 1
+        else:
+            special_cnt += 1
+
+    if lower_cnt >= 1:
+        strength += 1
+    if upper_cnt >= 1:
+        strength += 1
+    if num_cnt >= 1:
+        strength += 1
+    if wspace_cnt >= 1:
+        strength += 1
+    if special_cnt >= 1:
+        strength += 1    
+
+    if strength == 1:
+        remarks = "Too WEAK Password !!"
+    elif strength == 2:
+        remarks = "WEAK Password !!"
+    elif strength == 3:
+        remarks = "AVERAGE Password !!"
+    elif strength == 4:
+        remarks = "STRONG Password !!"
+    elif strength == 5:
+        remarks = "Too STRONG Password !!"
+    
+    print(" ")
+    
+    print("Your Password Has :")
+    print(" ")
+    print(f"{lower_cnt} lowercase characters.")
+    print(f"{upper_cnt} uppercase characters.")
+    print(f"{num_cnt} numeric characters.")
+    print(f"{wspace_cnt} whitespaces.")
+    print(f"{special_cnt} special characters.")
+    
+    print(" ")
+    print(f"Password Strength : {remarks}")
+    print(" ")
+
+def IF_n():
+    print("Thank You !!!")
+
+def ask_passwd(another_passwd = False):
+    valid = False
+    print(" ")
+    if another_passwd:
+        choice = input('Do you want to enter another password  (y/n):')
+    else:
+        choice = input('Do you want to check password  (y/n):')
+    
+    while not valid:
+        if choice.lower() == 'y':
+            return True
+        elif choice.lower() == 'n':
+            return False
+        else:
+            print("Invalid, Try again...")
+            choice = input('Do you want to check password  (y/n):')
+
+
+if __name__ == '__main__':
+    print(" ")
+    print("++++++++++ Welcome To Password Strength Checker ++++++++++")
+    ask_pwd = ask_passwd()
+    while ask_pwd:
+        check_passwd()
+        ask_pwd = ask_passwd(True)
